@@ -47,6 +47,9 @@ bamboo_jvm_minimum_memory: "2048m"
 bamboo_jvm_maximum_memory: "2048m"
 
 # Proxy and context path setup.
+bamboo_catalina_connector_port: 8080
+bamboo_catalina_connector_redirect_port: 8443
+bamboo_catalina_shutdown_port: 8007
 bamboo_catalina_connector_proxyname: ~
 bamboo_catalina_connector_proxyport: ~
 bamboo_catalina_connector_scheme: "http"
