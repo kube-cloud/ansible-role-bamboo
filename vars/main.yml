@@ -16,16 +16,27 @@
 
 _postgresql_jdbc_version:
   "42.2": "42.2.23"
+  "42.2.10": "42.2.10"
+  "42.2.6": "42.2.6"
 
 _postgresql_jdbc_download:
   "42.2.23":
     url: "http://jdbc.postgresql.org/download/postgresql-42.2.23.jar"
     dest: "/var/cache/ansible/7a16267953ae981734febd0200cd86261ebb950a6a6a819467b8816b9bfcf6c7/postgresql-42.2.23.jar"
     checksum: "7a16267953ae981734febd0200cd86261ebb950a6a6a819467b8816b9bfcf6c7"
+  "42.2.10":
+    url: "https://jdbc.postgresql.org/download/postgresql-42.2.10.jar"
+    dest: "/var/cache/ansible/7b9ce944866a87e9c173e5884cd0195e4555aff88e5ec74df7c11bedd2a73f74/postgresql-42.2.6.jar"
+    checksum: "7b9ce944866a87e9c173e5884cd0195e4555aff88e5ec74df7c11bedd2a73f74"
+  "42.2.6":
+    url: "https://jdbc.postgresql.org/download/postgresql-42.2.6.jar"
+    dest: "/var/cache/ansible/07daadb33e87638703bf41f3307fc0dbdb386e54af5d5d6481511a36f50ca004/postgresql-42.2.6.jar"
+    checksum: "07daadb33e87638703bf41f3307fc0dbdb386e54af5d5d6481511a36f50ca004"
 
 _bamboo_version:
   "8.0": "8.0.0"
   "7.2": "7.2.5"
+  "7.2.2": "7.2.2"
 
 _bamboo_download:
   "8.0.0":
@@ -40,7 +51,13 @@ _bamboo_download:
     url: "http://product-downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-7.2.4.tar.gz"
     dest: "/var/cache/ansible/2abd901092665fc68fa2a78f5da6a9a34d71e39845646b92992e73e9a80af162/atlassian-bamboo-7.2.4.tar.gz"
     checksum: "2abd901092665fc68fa2a78f5da6a9a34d71e39845646b92992e73e9a80af162"
+  # 04-Mars-2021
   "7.2.3":
     url: "http://product-downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-7.2.3.tar.gz"
     dest: "/var/cache/ansible/dc96051a4e21901e80c3abd03a642dbaefb1040083680cb84bcadcbdbba62785/atlassian-bamboo-7.2.3.tar.gz"
     checksum: "dc96051a4e21901e80c3abd03a642dbaefb1040083680cb84bcadcbdbba62785"
+  # 21-Jan-2021
+  "7.2.2":
+    url: "http://product-downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-7.2.2.tar.gz"
+    dest: "/var/cache/ansible/a177c6a83e483eda2ab48c6e25f57955e4149fb8739b754f93684d63f7040308/atlassian-bamboo-7.2.2.tar.gz"
+    checksum: "a177c6a83e483eda2ab48c6e25f57955e4149fb8739b754f93684d63f7040308"

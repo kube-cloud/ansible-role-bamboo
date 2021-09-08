@@ -62,3 +62,7 @@ bamboo_jvm_support_recommended_args: >-
 
 # Session timeout (in minutes).
 bamboo_session_timeout: "120"
+
+# Manage JVM
+manage_jvm_enabled: true
+jmx_remote_port: 9999

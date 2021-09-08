@@ -67,6 +67,23 @@ if [ -f "${PRGDIR}/permgen.sh" ]; then
 fi
 
 JAVA_OPTS=$(echo "$JAVA_OPTS" | sed -e 's/\s*$//' -e 's/^\s*//')
+
+{% if bamboo_max_meta_space is defined %}
+JAVA_OPTS="-XX:MaxMetaspaceSize={{ bamboo_max_meta_space }} ${JAVA_OPTS}"
+{% endif %}
+
+{% if bamboo_min_meta_space is defined %}
+JAVA_OPTS="-XX:MetaspaceSize={{ bamboo_min_meta_space }} ${JAVA_OPTS}"
+{% endif %}
+
+{% if bamboo_custom_agent_path is defined %}
+JAVA_OPTS="-javaagent:{{ bamboo_custom_agent_path }} ${JAVA_OPTS}"
+{% endif %}
+
+{% if manage_jvm_enabled|bool %}
+JAVA_OPTS="-Dcom.sun.management.jmxremote.port={{ jmx_remote_port }} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false ${JAVA_OPTS}"
+{% endif %}
+
 export JAVA_OPTS
 
 # set the location of the pid file
@@ -85,3 +102,4 @@ echo ""
 if [ "$BAMBOO_HOME_MINUSD" != "" ]; then
     echo "Using BAMBOO_HOME:       $BAMBOO_HOME"
 fi
+
