@@ -103,3 +103,5 @@ if [ "$BAMBOO_HOME_MINUSD" != "" ]; then
     echo "Using BAMBOO_HOME:       $BAMBOO_HOME"
 fi
 
+sed -i "s/\(<session-timeout>\).*\(<\/session-timeout>\)/\1${SESSION_TIMEOUT:-"{{ bamboo_session_timeout }}"}\2/g" ${BAMBOO_CATALINA}/apache-tomcat/conf/web.xml
+
